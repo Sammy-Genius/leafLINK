@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width:100%;
+    height:10%;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    top:0;
+}
+
+header .logo {
+    font-family: 'Sail', cursive;
+    font-weight:500;
+    font-size:2rem;
+    margin-left:5%;
+}
+
+header .logo:hover {
+    opacity:0.5;
+}
+
+header .logo a{
+    text-decoration:none;
+    color:#ffff;
+}
+
+header .menu {
+    width:50%;
+    display:flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+header .menu li {
+    list-style:none;
+}
+
+header .menu li:hover {
+    opacity:0.5;
+}
+
+header .menu li a {
+    text-decoration:none;
+    color:#fff;   
+    text-transform:uppercase;
+}
+
+/* for screens larger than 1024px */
+
+@media screen and (min-width: 1024px) {
+    .menu2, #content3, #team .team-caption2 {
+        display:none;
+    }
+
+    main {
+        width:80%;
+        height:auto;
+        margin: 160px auto;
+        display:grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
+    main .content1 {
+        grid-column:2/6;
+    }
+    
+    main .content1 h1 {
+        color:#fff;
+        font-size: 3rem;
+    }
+    
+    main .content1 h1:nth-child(2) {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    main .content1 .button {
+        margin-top:70px;
+        font-size:1.5rem;
+    }
+
+    
+    main .content1 .button a {
+        text-decoration:none;
+        color:royalblue;
+        border: 2px solid #fff;
+        padding: 15px 70px;
+        background-color: #fff;
+        transition:all .2s ease;
+    }
+
+    main .content1 .button a:hover {
+        padding: 15px 90px;
+    }
+
+
+    main .content2 {
+        grid-column: 6/9;
+        width:400px;
+        height:400px;
+        margin-left:-60px;
+    }
+
+    main .content2 .box1 {
+        width:100%;
+        height:100%;
+        background-color:rgb(139, 136, 136);
+        border-radius:400px 0px 400px 0px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    main .content2 .box1 .phone {
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+        background-image: url("images/Screenshot\ \(12\).png");
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position:center;
+        object-fit: cover;
+        border:15px solid #fff;
+        width:180px;
+        height:300px;
+        border-radius:20px;
+        transform:rotate(3deg) skew(-15deg);
+        margin-top:-150px;
+    }
+
+    main .content2 .box1 .phone .notch {
+        width:30px;
+        height:7px;
+        border-radius:5px;
+        background-color: #000;
+        margin:0 auto;
+    }
+
+    main .content2 .box1 .phone .line {
+        width:40px;
+        height:2px;
+        margin:0 auto;
+        background-color:#000;
+    }
+
+    #about-page {
+        width:90%;
+        height:auto;
+        margin:0 auto;
+        background-image:url("images/cool-background.png");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: 100%;
+        display:grid;
+        grid-template-columns: repeat(10, 1fr);
+        transform: skew(10deg);
+        border-radius: 30px;
+    }
+
+    #about-page .text {
+        grid-column: 2/6;
+        margin-top:70px;
+        border-left: 5px solid royalblue;
+        border-right: 5px solid royalblue;
+        padding:5px 50px;
+        border-radius: 50%;
+    }
+
+    #about-page .text h1 {
+        color:royalblue;
+        font-size: 3rem;
+    }
+
+    #about-page .text p {
+        margin-top:30px;
+        color:royalblue;
+        line-height: 30px;
+    }
+
+    #about-page .pic-box {
+        grid-column:7/9;
+        width:400px;
+        height:400px;
+    }
+
+    #about-page .pic-box .pic {
+        background-image: url("images/undraw_mobile_marketing_iqbr-removebg-preview.png");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: 100%;
+        width:400px;
+        height:100%;
+    }
+
+    .team-caption {
+        text-align:center;
+        font-size:3rem;
+        color:#fff;
+        margin-top:70px;
+        text-transform:uppercase;
+    }
+
+   #team {
+       margin:20px auto;
+       width:90%;
+       height:400px;
+       background-color:royalblue;
+       display:flex;
+       justify-content:space-evenly;
+   }
+
+   #team .member-box1 {
+       margin-top:30px;
+       width:200px;
+       height:200px;
+       border-radius:50%;
+       background-color:#fff;
+   }
+
+   #team .member-box1 .member-pic {
+       width:100%;
+       height:100%;
+       background-image: url("images/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg");
+       background-position: center;
+       background-repeat:no-repeat;
+       background-size:100%;
+       border-radius: 50%;
+       margin-left:20px;
+   }
+
+   #team .member-box1 p {
+       color:#fff;
+       text-align:center;
+       margin-top:10px;
+   }
+
+   #team .member-box2 {
+       margin-top:30px;
+       width:200px;
+       height:200px;
+       border-radius:50%;
+       background-color:#fff;
+   }
+
+   #team .member-box2 .member-pic2 {
+       width:100%;
+       height:100%;
+       background-image: url("images/etty-fidele-6UWqw25wfLI-unsplash.jpg");
+       background-position: center;
+       background-repeat:no-repeat;
+       background-size:100%;
+       border-radius: 50%;
+       margin-left:20px;
+   }
+
+   #team .member-box2 p {
+    color:#fff;
+    text-align:center;
+    margin-top:10px;
+}
+
+   #team .member-box3 {
+       margin-top:30px;
+       width:200px;
+       height:200px;
+       border-radius:50%;
+       background-color:#fff;
+   }
+
+   #team .member-box3 .member-pic3 {
+       width:100%;
+       height:100%;
+       background-image: url("images/mohammad-faruque-SpIKPT8zeAs-unsplash.jpg");
+       background-position: center;
+       background-repeat:no-repeat;
+       background-size:100%;
+       border-radius: 50%;
+       margin-left:20px;
+   }
+
+   #team .member-box3 p {
+    color:#fff;
+    text-align:center;
+    margin-top:10px;
+}
+
+   #team .member-box4 {
+       margin-top:30px;
+       width:200px;
+       height:200px;
+       border-radius:50%;
+       background-color:#fff;
+   }
+
+   #team .member-box4 .member-pic4 {
+       width:100%;
+       height:100%;
+       background-image: url("images/mike-von-BhcutpohYwg-unsplash.jpg");
+       background-position: center;
+       background-repeat:no-repeat;
+       background-size:100%;
+       border-radius: 50%;
+       margin-left:20px;
+   }
+
+   #team .member-box4 p {
+    color:#fff;
+    text-align:center;
+    margin-top:10px;
+}
+
+
+}
+
+
+/* for screens smaller than 1023px */
+
+@media screen and (max-width: 1023px) {
+
+    header{
+        justify-content: space-between;
+    }
+
+    header .logo {
+        margin-left:5%;
+    }
+
+    header .menu, .content2, #about-page, .team-caption{
+        display:none;
+    }
+
+    header .logo {
+        font-size:1.5rem;
+    }
+
+    header .menu2-btn {
+        color:#fff;
+        margin-right:5%;
+    }
+
+    header .menu2-btn div  {
+        width:20px;
+        height:3px;
+        background-color: #fff;
+        margin-bottom:5px;
+    }
+
+    header .menu2-btn div:nth-child(2) {
+        width:15px;
+    }
+
+    .menu2 {
+        width:0%;
+        height:0%;
+        border-radius: 0px 0px 0px 0px;
+        position:fixed;
+        bottom:0;
+        left:0;
+        z-index:1000;
+        background-color:royalblue;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        visibility: hidden;
+        transition:all 0.4s ease-in-out;
+    }
+
+    .menu2 .close-btn {
+        position: absolute;
+        top:2%;
+        right:5%;
+        color:royalblue;
+        font-size:2.5rem;
+    }
+
+    .menu2 .menu2-list li {
+        list-style:none;
+        margin-bottom:100px;
+        text-transform: uppercase;
+    }
+
+    .menu2 .menu2-list li a {
+        text-decoration:none;
+        color:royalblue;
+        font-size:1.2rem;
+    }
+
+    main {
+        margin:180px auto;
+        width:80%;
+        height:auto;
+    }
+
+    main .content1 h1{
+        color:#fff;
+        font-size:2rem;
+        text-align:center;
+    }
+
+    main .content1 h1:nth-child(2) {
+        -webkit-text-fill-color:transparent;
+        -webkit-text-stroke-width:1px;
+    }
+
+    main .content1 .button {
+        margin-top: 50px;
+        text-align:center;
+    }
+
+    main .content1 .button a {
+        border: 2px solid #fff;
+        color:royalblue;
+        padding:15px 30px;
+        background-color: #fff;
+        text-decoration:none;
+        font-size:1.5rem;
+        border-radius:30px;
+    }
+
+    #content3 {
+        width:100%;
+        height:auto;
+        background-color:#fff;
+        border-radius:0px 400px 0px 0px;
+        margin-top: -100px;
+    }
+
+    #content3 .image2 {
+        background-image: url("images/undraw_mobile_marketing_iqbr-removebg-preview.png");
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position:center;
+        width:300px;
+        height:300px;
+        margin:0px auto;
+    }
+
+    #content3 .about {
+        width:80%;
+        height:auto;
+        margin:20px auto;
+    }
+
+    #content3 .about h1 {
+        color:royalblue;
+        text-align:center;
+        font-size:2rem;
+    }
+
+    #content3 .about p {
+        text-align:center;
+        color:royalblue;
+        line-height:30px;
+        margin-top:30px;
+    }
+
+    .team-caption2 {
+        margin-top:30px;
+        color:royalblue;
+        text-align:center;
+        font-size:2rem;
+    }
+
+    #team {
+        margin:50px auto;
+        width:90%;
+        height:auto;
+        background-color:#fff;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        border-radius:30px;
+    }
+ 
+    #team .member-box1 {
+        margin:50px auto;
+        width:200px;
+        height:200px;
+        background-color:royalblue;
+        border-radius: 50%;
+        transform: skew(5deg);
+    }
+ 
+    #team .member-box1 .member-pic {
+        width:100%;
+        height:100%;
+        background-image: url("images/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:100%;
+        border-radius:50%;
+        margin-left:20px;
+    }
+ 
+    #team .member-box1 p {
+        color:#fff;
+        text-align:center;
+        margin-top:10px;
+        color:royalblue
+    }
+ 
+    #team .member-box2 {
+        margin:50px auto;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        background-color:royalblue;
+        transform: skew(5deg);
+    }
+ 
+    #team .member-box2 .member-pic2 {
+        width:100%;
+        height:100%;
+        background-image: url("images/etty-fidele-6UWqw25wfLI-unsplash.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:100%;
+        border-radius: 50%;
+        margin-left:20px;
+    }
+ 
+    #team .member-box2 p {
+     color:#fff;
+     text-align:center;
+     margin-top:10px;
+     color:royalblue;
+ }
+ 
+    #team .member-box3 {
+        margin:70px auto;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        background-color:royalblue;
+        transform: skew(5deg);
+    }
+ 
+    #team .member-box3 .member-pic3 {
+        width:100%;
+        height:100%;
+        background-image: url("images/mohammad-faruque-SpIKPT8zeAs-unsplash.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:100%;
+        border-radius: 50%;
+        margin-left:20px;
+    }
+ 
+    #team .member-box3 p {
+     color:#fff;
+     text-align:center;
+     margin-top:10px;
+     color:royalblue;
+ }
+ 
+    #team .member-box4 {
+        margin:50px auto 70px;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        background-color:royalblue;
+        transform: skew(5deg);
+    }
+ 
+    #team .member-box4 .member-pic4 {
+        width:100%;
+        height:100%;
+        background-image: url("images/mike-von-BhcutpohYwg-unsplash.jpg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:100%;
+        border-radius: 50%;
+        margin-left:20px;
+    }
+ 
+    #team .member-box4 p {
+     color:#fff;
+     text-align:center;
+     margin-top:10px;
+     color:royalblue;
+ }
+ 
+
+}
+
