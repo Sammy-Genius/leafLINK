@@ -2,6 +2,8 @@ const sideMenuBtn = document.querySelector(".menu2-btn");
 const sideMenu = document.querySelector(".menu2");
 const sideMenuList = document.querySelectorAll(".menu2-list");
 const closeBtn = document.querySelector(".close-btn");
+const collapseMenu = document.querySelector(".link");
+const collapseMenu2 = document.querySelector(".link2");
 const tl = gsap.timeline();
 
 
@@ -9,13 +11,13 @@ tl.from("header", {opacity:0, duration:1, x:30, ease: Power2.easeInOut})
   .from(".menu2-btn", {opacity:0, duration:1, x:30, ease: Power2.easeInOut}, "-=.3")
   .from(".content1 h1", {opacity:0, duration:.5, y:-30, stagger:.5, ease: "bounce"}, "-=.5")
   .from(".content2 .box1", {opacity:0, duration:.7, x:30, ease: Power2.easeInOut}, "-=.3")
-  .from(".content1 .button", {opacity:0, duration:.7, y:30, scale:.3, ease: "elastic"}, "-=.1");
-/* this opens the side menu */
+  .from(".content1 .button", {opacity:0, duration:.7, y:30, scale:.3, ease: "elastic"}, "+=.4");
+
+  /* this opens the side menu */
 
 sideMenuBtn.addEventListener("click", () => {
     if(sideMenu.style.visibility == "hidden") {
         sideMenu.style.visibility = "visible";
-        tl.from(".menu2", {opacity:0, duration:1});
         sideMenu.style.backgroundColor = "white";
         sideMenu.style.width = "100%";
         sideMenu.style.height = "100%";
@@ -26,6 +28,17 @@ sideMenuBtn.addEventListener("click", () => {
         sideMenu.style.visibility = "hidden";
     }
 });
+
+collapseMenu.addEventListener("click", () => {
+    sideMenu.style.visibility = "hidden";
+    sideMenu.style.transition = "all .2s ease-in-out";
+});
+
+collapseMenu2.addEventListener("click", () => {
+    sideMenu.style.visibility = "hidden";
+    sideMenu.style.transition = "all .2s ease-in-out";
+});
+
 
 /* this closes the side menu */
 
